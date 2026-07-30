@@ -1,0 +1,14 @@
+{
+  "name": "git-cheat-sheet",
+  "version": "1.0.0",
+  "description": "A simple cheat sheet for git most used commands.",
+  "type": "module",
+  "scripts": {},
+  "devEngines": {
+    "packageManager": {
+      "name": "pnpm",
+      "version": "^11.18.0",
+      "onFail": "download"
+    }
+  }
+}
