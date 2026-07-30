@@ -1,1 +1,14 @@
 @import "tailwindcss";
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer components {
+  .grid-box {
+    @apply grid gap-4;
+    grid-template-columns: repeat(auto-fit, minmax(min(0%, 100%), 1fr));
+  }
+}
