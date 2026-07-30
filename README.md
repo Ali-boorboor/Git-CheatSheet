@@ -5,6 +5,12 @@ A simple cheat sheet web page for git **most used commands**.
 ![total commits](https://img.shields.io/github/commit-activity/t/Ali-boorboor/Git-CheatSheet)
 ![createdAt](https://img.shields.io/github/created-at/ali-boorboor/git-cheatsheet)
 
+## Demo
+
+Try out the project [Here](https://ali-boorboor.github.io/Git-CheatSheet/) .
+
+Feel free to contact me or add issue if you see any bug or if you had suggestions 🙏
+
 ## Used Technology
 
 [![HTML](https://img.shields.io/badge/HTML-%23E34F26.svg?logo=html5&logoColor=white)](#)
