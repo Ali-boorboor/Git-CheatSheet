@@ -3,12 +3,18 @@
   "version": "1.0.0",
   "description": "A simple cheat sheet for git most used commands.",
   "type": "module",
-  "scripts": {},
+  "scripts": {
+    "tw": "pnx @tailwindcss/cli -i ./assets/styles/input.css -o ./assets/styles/output.css --watch"
+  },
   "devEngines": {
     "packageManager": {
       "name": "pnpm",
       "version": "^11.18.0",
       "onFail": "download"
     }
+  },
+  "dependencies": {
+    "@tailwindcss/cli": "^4.3.3",
+    "tailwindcss": "^4.3.3"
   }
 }
