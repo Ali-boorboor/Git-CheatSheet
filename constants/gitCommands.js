@@ -10,7 +10,7 @@ const gitCommands = [
       {
         id: 2,
         title: "Clone a repository",
-        command: "git clone <url>",
+        command: "git clone &lt;url&gt;",
       },
     ],
   },
@@ -20,7 +20,7 @@ const gitCommands = [
       {
         id: 1,
         title: "Stage file",
-        command: "git add <file>",
+        command: "git add &lt;file&gt;",
       },
       {
         id: 2,
@@ -30,7 +30,7 @@ const gitCommands = [
       {
         id: 3,
         title: "Unstage one file",
-        command: "git reset <file>",
+        command: "git reset &lt;file&gt;",
       },
       {
         id: 4,
@@ -75,27 +75,27 @@ const gitCommands = [
       {
         id: 2,
         title: "Create a branch",
-        command: "git branch <name>",
+        command: "git branch &lt;name&gt;",
       },
       {
         id: 3,
         title: "Switch branch",
-        command: "git switch <name>",
+        command: "git switch &lt;name&gt;",
       },
       {
         id: 4,
         title: "Create and switch",
-        command: "git switch -c <name>",
+        command: "git switch -c &lt;name&gt;",
       },
       {
         id: 5,
         title: "Delete branch",
-        command: "git branch -d <name>",
+        command: "git branch -d &lt;name&gt;",
       },
       {
         id: 6,
         title: "Force delete a branch",
-        command: "git branch -D <name>",
+        command: "git branch -D &lt;name&gt;",
       },
     ],
   },
@@ -105,12 +105,12 @@ const gitCommands = [
       {
         id: 1,
         title: "Merge main branch with another branch",
-        command: "git merge <branch>",
+        command: "git merge &lt;branch&gt;",
       },
       {
         id: 2,
         title: "Rebase Merge main branch with another branch",
-        command: "git rebase <branch>",
+        command: "git rebase &lt;branch&gt;",
       },
     ],
   },
@@ -135,17 +135,17 @@ const gitCommands = [
       {
         id: 4,
         title: "Show diff between a commit and its parent",
-        command: "git show <commitID or branch name or tag>",
+        command: "git show &lt;commitID or branch name or tag&gt;",
       },
       {
         id: 5,
         title: "Diff two commits",
-        command: "git diff <commit> <commit>",
+        command: "git diff &lt;commit&gt; &lt;commit&gt;",
       },
       {
         id: 6,
         title: "Diff one file since a commit",
-        command: "git diff <commit> <file>",
+        command: "git diff &lt;commit&gt; &lt;file&gt;",
       },
     ],
   },
@@ -155,12 +155,12 @@ const gitCommands = [
       {
         id: 1,
         title: "Delete unstaged changes to one file",
-        command: "git restore <file>",
+        command: "git restore &lt;file&gt;",
       },
       {
         id: 2,
         title: "Delete all staged and unstaged changes to one file",
-        command: "git checkout HEAD <file>",
+        command: "git checkout HEAD &lt;file&gt;",
       },
       {
         id: 3,
@@ -175,7 +175,7 @@ const gitCommands = [
       {
         id: 1,
         title: "Show every commit that modified a file",
-        command: "git log <file>",
+        command: "git log &lt;file&gt;",
       },
       {
         id: 2,
@@ -195,7 +195,7 @@ const gitCommands = [
       {
         id: 5,
         title: "Show who last changed each line of a file",
-        command: "git blame <file>",
+        command: "git blame &lt;file&gt;",
       },
     ],
   },
@@ -205,22 +205,22 @@ const gitCommands = [
       {
         id: 1,
         title: "Get the version of a file from another commit (detached head)",
-        command: "git checkout <commit> <file>",
+        command: "git checkout &lt;commit&gt; &lt;file&gt;",
       },
       {
         id: 2,
         title: "Get the version of a file from another commit",
-        command: "git restore <file> --source <commit>",
+        command: "git restore &lt;file&gt; --source &lt;commit&gt;",
       },
       {
         id: 3,
         title: "Get the version of files from another commit (detached head)",
-        command: "git checkout <commit>",
+        command: "git checkout &lt;commit&gt;",
       },
       {
         id: 4,
         title: "Get the version of files from another commit",
-        command: "git restore --source <commit>",
+        command: "git restore --source &lt;commit&gt;",
       },
     ],
   },
@@ -230,7 +230,7 @@ const gitCommands = [
       {
         id: 1,
         title: "Add a Remote",
-        command: "git remote add <name> <url>",
+        command: "git remote add &lt;name&gt; &lt;url&gt;",
       },
       {
         id: 2,
@@ -250,13 +250,13 @@ const gitCommands = [
       {
         id: 1,
         title: "Push the branch to the remote",
-        command: "git push <remote> <branch>",
+        command: "git push &lt;remote&gt; &lt;branch&gt;",
       },
       {
         id: 2,
         title:
           "Push a branch that you've never pushed before (after this just use git push)",
-        command: "git push -u <remote> <branch>",
+        command: "git push -u &lt;remote&gt; &lt;branch&gt;",
       },
       {
         id: 3,
@@ -281,7 +281,7 @@ const gitCommands = [
       {
         id: 2,
         title: "Fetch changes and then merge them into your current branch",
-        command: "git pull <remote> <branch>",
+        command: "git pull &lt;remote&gt; &lt;branch&gt;",
       },
       {
         id: 3,

@@ -10,9 +10,9 @@
     class="bg-[url('../images/github-bg.png')] bg-no-repeat bg-center bg-fixed bg-cover min-h-dvh grid grid-rows-[auto_1fr_auto]"
   >
     <header
-      class="bg-neutral-500 text-neutral-900 px-4 py-2 flex justify-center items-center gap-4 ring-1 ring-neutral-400 shadow-sm shadow-neutral-400/50 sticky top-0"
+      class="bg-neutral-500 text-neutral-900 px-4 py-2 flex justify-center items-center gap-4 ring-1 ring-neutral-400 shadow-sm shadow-neutral-400/50 sticky top-0 z-10"
     >
-      <figure class="w-16 h-16">
+      <figure class="w-12 sm:w-16 h-12 sm:h-16">
         <img
           src="./assets/images/Github-logo.svg"
           class="size-full object-cover"
@@ -20,16 +20,16 @@
         />
       </figure>
 
-      <h1 class="sm:text-lg md:text-2xl font-bold capitalize">
+      <h1 class="hidden sm:block text-2xl font-bold capitalize">
         Git Commands Cheat Sheet
       </h1>
     </header>
 
-    <main class="" id="main">
+    <main id="main">
       <hgroup
-        class="grid gap-4 place-content-center place-items-center min-h-dvh text-neutral-100"
+        class="grid gap-4 place-content-center place-items-center min-h-dvh mb-10 text-neutral-100 backdrop-blur-[2px]"
       >
-        <h2 class="sm:text-2xl md:text-6xl font-bold capitalize">Welcome</h2>
+        <h2 class="text-4xl md:text-6xl font-bold capitalize">Welcome</h2>
 
         <p class="md:text-lg font-medium capitalize text-neutral-400">
           scroll down to see commands
@@ -55,63 +55,24 @@
           </svg>
         </a>
       </hgroup>
-
-      <section
-        class="flex gap-4 justify-between items-center px-4 py-2 bg-neutral-800 text-neutral-300 ring-1 ring-neutral-400 shadow-sm shadow-neutral-400/50"
-        id="getting-started"
-      >
-        <h3
-          class="md:text-xl font-semibold capitalize text-neutral-100 relative before:absolute before:w-full before:h-1 before:bg-neutral-100 before:-bottom-1.5 before:left-0 before:right-0 before:mx-auto before:rounded-md before:transition-all before:ease-in-out before:duration-300 hover:before:w-1/2"
-        >
-          Getting Started
-        </h3>
-
-        <div class="grid-box">
-          <div
-            class="bg-neutral-900 text-neutral-100 p-2.5 ring-1 ring-neutral-100/20 rounded-md"
-          >
-            <header class="flex gap-4 items-center justify-between mb-1.5">
-              <h4>Start a new repo</h4>
-
-              <button
-                class="bg-neutral-500/80 text-neutral-100 border border-neutral-100/20 p-1 rounded-md cursor-pointer hover:bg-neutral-500 transition-colors ease-in-out duration-300"
-                data-command="git init"
-                type="button"
-                title="copy"
-              >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke-width="1.5"
-                  stroke="currentColor"
-                  class="size-6"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    d="M15.75 17.25v3.375c0 .621-.504 1.125-1.125 1.125h-9.75a1.125 1.125 0 0 1-1.125-1.125V7.875c0-.621.504-1.125 1.125-1.125H6.75a9.06 9.06 0 0 1 1.5.124m7.5 10.376h3.375c.621 0 1.125-.504 1.125-1.125V11.25c0-4.46-3.243-8.161-7.5-8.876a9.06 9.06 0 0 0-1.5-.124H9.375c-.621 0-1.125.504-1.125 1.125v3.5m7.5 10.375H9.375a1.125 1.125 0 0 1-1.125-1.125v-9.25m12 6.625v-1.875a3.375 3.375 0 0 0-3.375-3.375h-1.5a1.125 1.125 0 0 1-1.125-1.125v-1.5a3.375 3.375 0 0 0-3.375-3.375H9.75"
-                  />
-                </svg>
-              </button>
-            </header>
-
-            <code
-              class="bg-neutral-500 text-neutral-100 border border-neutral-100/20 py-1 px-2 rounded-md text-sm"
-            >
-              git init
-            </code>
-          </div>
-        </div>
-      </section>
     </main>
 
     <footer
-      class="bg-neutral-500 text-neutral-900 px-4 py-2 ring-1 ring-neutral-400 shadow-sm shadow-neutral-400/50"
+      class="text-lg bg-neutral-500 text-neutral-900 mt-20 px-4 py-2 ring-1 ring-neutral-400 shadow-sm shadow-neutral-400/50"
     >
       <p class="capitalize font-medium text-center">
-        made with 🖤 by <strong>Ali boorboor</strong>
+        made with 🖤 by
+        <a
+          class="font-bold border-b-2 border-neutral-900"
+          href="https://github.com/Ali-boorboor"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          Ali boorboor
+        </a>
       </p>
     </footer>
+
+    <script src="./assets/scripts/main.js" type="module"></script>
   </body>
 </html>
