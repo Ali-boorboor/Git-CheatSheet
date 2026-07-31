@@ -27,13 +27,13 @@ function renderSection(section) {
 function renderCommand(command) {
   return `
     <div
-      class="bg-neutral-900 text-neutral-100 p-2.5 ring-1 ring-neutral-100/20 rounded-md"
+      class="bg-neutral-900 text-neutral-100 p-2.5 ring-1 ring-neutral-100/20 rounded-md grid grid-rows-[1fr_auto] overflow-x-auto relative"
     >
-      <header class="flex gap-4 items-center justify-between mb-1.5">
+      <header class="flex gap-4 items-start justify-between mb-1.5">
         <h4>${command.title}</h4>
 
         <button
-          class="copy-command-button bg-neutral-500/80 text-neutral-100 border border-neutral-100/20 p-1 rounded-md cursor-pointer hover:bg-neutral-500 transition-colors ease-in-out duration-300"
+          class="copy-command-button sticky right-0 bg-neutral-500 text-neutral-100 border border-neutral-100/20 p-1 rounded-md cursor-pointer hover:bg-neutral-500/80 transition-colors ease-in-out duration-300"
           data-command="${command.command}"
           type="button"
           title="copy"
@@ -56,7 +56,7 @@ function renderCommand(command) {
       </header>
 
       <code
-        class="bg-neutral-500 text-neutral-100 border border-neutral-100/20 py-1 px-2 rounded-md text-sm text-nowrap"
+        class="bg-neutral-500 text-neutral-100 border border-neutral-100/20 py-1 px-2 rounded-md text-sm text-nowrap w-fit"
       >
         ${command.command}
       </code>
