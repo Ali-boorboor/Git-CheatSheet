@@ -17,6 +17,7 @@ Feel free to contact me or add issue if you see any bug or if you had suggestion
 [![CSS](https://img.shields.io/badge/CSS-639?logo=css&logoColor=fff)](#)
 [![Tailwind CSS](https://img.shields.io/badge/Tailwind%20CSS-%2338B2AC.svg?logo=tailwind-css&logoColor=white)](#)
 [![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?logo=javascript&logoColor=000)](#)
+[![pnpm](https://img.shields.io/badge/pnpm-F69220?logo=pnpm&logoColor=fff)](#)
 
 ## Scripts
 
@@ -35,6 +36,8 @@ Feel free to contact me or add issue if you see any bug or if you had suggestion
 > We have a `gitCommands.js` file in `constants` folder which has git commands datas.
 
 > In `main.js` file we render codes based on `gitCommands.js` datas.
+
+> Package manager of this project is `pnpm`.
 
 ## Preview
 
