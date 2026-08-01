@@ -74,7 +74,7 @@ window.addEventListener("click", (event) => {
 
       Toastify({
         text: "Command Copied Successfully 🥳",
-        duration: 3000000,
+        duration: 3000,
         position: "right",
         style: {
           background:
