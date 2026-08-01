@@ -1,4 +1,5 @@
 import gitCommands from "../../constants/gitCommands.js";
+import Toastify from "./toastify.js";
 
 const mainElement = document.querySelector("#main");
 
@@ -70,8 +71,32 @@ window.addEventListener("click", (event) => {
   if (button) {
     try {
       navigator.clipboard.writeText(button.dataset.command);
-    } catch (error) {
-      console.error(error);
+
+      Toastify({
+        text: "Command Copied Successfully 🥳",
+        duration: 3000000,
+        position: "right",
+        style: {
+          background:
+            "linear-gradient(to right, oklch(52.7% 0.154 150.069), oklch(50.8% 0.118 165.612)",
+
+          boxShadow:
+            "0 3px 6px -1px rgba(0, 0, 0, 0.12), 0 10px 20px -4px rgba(255, 255, 255, 0.1)",
+        },
+      }).showToast();
+    } catch (_) {
+      Toastify({
+        text: "Error In Copying Command 🥲",
+        position: "right",
+        duration: 3000,
+        style: {
+          background:
+            "linear-gradient(to right, oklch(50.5% 0.213 27.518), oklch(51.4% 0.222 16.935)",
+
+          boxShadow:
+            "0 3px 6px -1px rgba(0, 0, 0, 0.12), 0 10px 20px -4px rgba(255, 255, 255, 0.1)",
+        },
+      }).showToast();
     }
   }
 });
