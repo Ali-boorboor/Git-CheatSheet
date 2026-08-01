@@ -59,8 +59,13 @@ const gitCommands = [
       },
       {
         id: 3,
-        title: "Add a file you forgot to last commit",
+        title: "Add a file you forgot to last commit (first stage file)",
         command: "git commit --amend",
+      },
+      {
+        id: 4,
+        title: "Change last commit message",
+        command: "git commit --amend -m 'message'",
       },
     ],
   },
@@ -167,6 +172,16 @@ const gitCommands = [
         title: "Delete untracked files",
         command: "git clean",
       },
+      {
+        id: 4,
+        title: "Undo a push",
+        command: "git push -f &lt;remote&gt; HEAD^:&lt;branch&gt;",
+      },
+      {
+        id: 5,
+        title: "Remove a file from last commit (then commit amend it)",
+        command: "git reset HEAD^ -- &lt;file&gt;",
+      },
     ],
   },
   {
@@ -268,6 +283,16 @@ const gitCommands = [
         title: "Push tags",
         command: "git push --tags",
       },
+      {
+        id: 5,
+        title: "Force push (dangerous)",
+        command: "git push --force",
+      },
+      {
+        id: 6,
+        title: "Force push (safer option)",
+        command: "git push --force-with-lease",
+      },
     ],
   },
   {
@@ -288,6 +313,71 @@ const gitCommands = [
         title:
           "Fetch changes and then merge them into your current branch (short version)",
         command: "git pull",
+      },
+    ],
+  },
+  {
+    label: "Stash",
+    commands: [
+      {
+        id: 1,
+        title: "Stash changes",
+        command: "git stash",
+      },
+      {
+        id: 2,
+        title: "Stash changes with a message",
+        command: "git stash -m 'message'",
+      },
+      {
+        id: 3,
+        title: "List stashs",
+        command: "git stash list",
+      },
+      {
+        id: 4,
+        title: "Unstash and remove last stash",
+        command: "git stash pop",
+      },
+      {
+        id: 5,
+        title: "Unstash last stash (without deletion)",
+        command: "git stash apply",
+      },
+      {
+        id: 6,
+        title: "Remove one stash",
+        command: "git stash drop &lt;stash&gt;",
+      },
+    ],
+  },
+  {
+    label: "Tags",
+    commands: [
+      {
+        id: 1,
+        title: "Add a tag",
+        command: "git tag &lt;name&gt; &lt;commit&gt;",
+      },
+      {
+        id: 2,
+        title: "Add a tag (on the last commit)",
+        command: "git tag &lt;name&gt; HEAD",
+      },
+      {
+        id: 3,
+        title: "List tags",
+        command: "git tag",
+      },
+      {
+        id: 4,
+        title: "Remove a tag",
+        command: "git tag -d &lt;name&gt;",
+      },
+      {
+        id: 5,
+        title: "Replace a tag and set it for new commit",
+        command: "git tag -f &lt;name&gt; &lt;commit&gt;",
       },
     ],
   },
