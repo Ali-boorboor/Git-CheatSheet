@@ -39,6 +39,8 @@ Feel free to contact me or add issue if you see any bug or if you had suggestion
 
 > Package manager of this project is `pnpm`.
 
+> `Toastify` package used for notifications.
+
 ## Preview
 
 <div align="center">
