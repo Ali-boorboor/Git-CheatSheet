@@ -1,4 +1,4 @@
-import gitCommands from "../../constants/gitCommands.js";
+import gitCommands from "../../data/gitCommands.js";
 import Toastify from "./toastify.js";
 
 const mainElement = document.querySelector("#main");
