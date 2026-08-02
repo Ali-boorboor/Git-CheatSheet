@@ -36,12 +36,14 @@ function renderCommand(command) {
         <button
           class="copy-command-button sticky right-0 bg-neutral-500 text-neutral-100 border border-neutral-100/20 p-1 rounded-md cursor-pointer hover:bg-neutral-500/80 transition-colors ease-in-out duration-300"
           data-command="${command.command}"
+          aria-label="copy Git command"
           type="button"
           title="copy"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
+            aria-hidden="true"
             viewBox="0 0 24 24"
             stroke-width="1.5"
             stroke="currentColor"
