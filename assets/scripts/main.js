@@ -3,15 +3,33 @@ import Toastify from "./toastify.js";
 
 const mainElement = document.querySelector("#main");
 
-gitCommands.forEach((section) => {
-  mainElement.insertAdjacentHTML("beforeend", renderSection(section));
+const DEFAULT_TOAST_DURATION = 3000;
+const DEFAULT_TOAST_POSITION = "right";
+
+const SUCCESS_TOAST_STYLE = Object.freeze({
+  background:
+    "linear-gradient(to right, oklch(52.7% 0.154 150.069), oklch(50.8% 0.118 165.612)",
+
+  boxShadow:
+    "0 3px 6px -1px rgba(0, 0, 0, 0.12), 0 10px 20px -4px rgba(255, 255, 255, 0.1)",
+});
+const ERROR_TOAST_STYLE = Object.freeze({
+  background:
+    "linear-gradient(to right, oklch(50.5% 0.213 27.518), oklch(51.4% 0.222 16.935)",
+
+  boxShadow:
+    "0 3px 6px -1px rgba(0, 0, 0, 0.12), 0 10px 20px -4px rgba(255, 255, 255, 0.1)",
 });
 
 function renderSection(section) {
+  const sectionID = section.label.replaceAll(" ", "-").toLowerCase();
+
+  const sectionCommands = section.commands.map(renderCommand).join("");
+
   return `
 <section
   class="flex flex-col sm:flex-row gap-4 justify-between items-center scroll-m-40 p-4 bg-neutral-800 text-neutral-300 ring-1 ring-neutral-400 shadow-sm shadow-neutral-400/50"
-  id='${section.label.replaceAll(" ", "-").toLowerCase()}'
+  id='${sectionID}'
 >
   <h3
     class="flex-1 text-xl font-semibold capitalize text-neutral-100 text-center"
@@ -20,7 +38,7 @@ function renderSection(section) {
   </h3>
 
   <div class="grid-box w-full flex-3">
-  ${section.commands.map(renderCommand).join("")}
+  ${sectionCommands}
   </div>
 </section>`;
 }
@@ -67,38 +85,44 @@ function renderCommand(command) {
     `;
 }
 
-window.addEventListener("click", (event) => {
+async function handleCopyCommand(event) {
   const button = event.target.closest(".copy-command-button");
 
-  if (button) {
-    try {
-      navigator.clipboard.writeText(button.dataset.command);
+  if (!button) return;
 
-      Toastify({
-        text: "Command Copied Successfully 🥳",
-        duration: 3000,
-        position: "right",
-        style: {
-          background:
-            "linear-gradient(to right, oklch(52.7% 0.154 150.069), oklch(50.8% 0.118 165.612)",
+  try {
+    await navigator.clipboard.writeText(button.dataset.command);
 
-          boxShadow:
-            "0 3px 6px -1px rgba(0, 0, 0, 0.12), 0 10px 20px -4px rgba(255, 255, 255, 0.1)",
-        },
-      }).showToast();
-    } catch (_) {
-      Toastify({
-        text: "Error In Copying Command 🥲",
-        position: "right",
-        duration: 3000,
-        style: {
-          background:
-            "linear-gradient(to right, oklch(50.5% 0.213 27.518), oklch(51.4% 0.222 16.935)",
+    createToast({
+      text: "Command Copied Successfully 🥳",
+      style: SUCCESS_TOAST_STYLE,
+    }).showToast();
+  } catch (error) {
+    console.error(error);
 
-          boxShadow:
-            "0 3px 6px -1px rgba(0, 0, 0, 0.12), 0 10px 20px -4px rgba(255, 255, 255, 0.1)",
-        },
-      }).showToast();
-    }
+    createToast({
+      text: "Error In Copying Command 🥲",
+      style: ERROR_TOAST_STYLE,
+    }).showToast();
   }
+}
+
+function createToast({
+  text,
+  duration = DEFAULT_TOAST_DURATION,
+  position = DEFAULT_TOAST_POSITION,
+  style,
+}) {
+  return Toastify({
+    text,
+    duration,
+    position,
+    style,
+  });
+}
+
+gitCommands.forEach((section) => {
+  mainElement.insertAdjacentHTML("beforeend", renderSection(section));
 });
+
+mainElement.addEventListener("click", handleCopyCommand);
