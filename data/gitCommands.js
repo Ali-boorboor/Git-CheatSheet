@@ -67,6 +67,11 @@ const gitCommands = [
         title: "Change last commit message",
         command: "git commit --amend -m 'message'",
       },
+      {
+        id: 5,
+        title: "Change last commit without changing message",
+        command: "git commit --amend --no-edit",
+      },
     ],
   },
   {
@@ -209,6 +214,11 @@ const gitCommands = [
       },
       {
         id: 5,
+        title: "Show commits count",
+        command: "git rev-list --count HEAD",
+      },
+      {
+        id: 6,
         title: "Show who last changed each line of a file",
         command: "git blame &lt;file&gt;",
       },
