@@ -4,14 +4,15 @@ A simple cheat sheet web page for git **most used commands**.
 
 ![total commits](https://img.shields.io/github/commit-activity/t/Ali-boorboor/Git-CheatSheet)
 ![createdAt](https://img.shields.io/github/created-at/ali-boorboor/git-cheatsheet)
+![version tag](https://img.shields.io/github/v/tag/ali-boorboor/git-cheatsheet)
 
-## Demo
+## Demo 👀
 
 Try out the project [Here](https://ali-boorboor.github.io/Git-CheatSheet/) .
 
 Feel free to contact me or add issue if you see any bug or if you had suggestions 🙏
 
-## Used Technology
+## Used Technology ⚙️
 
 [![HTML](https://img.shields.io/badge/HTML-%23E34F26.svg?logo=html5&logoColor=white)](#)
 [![CSS](https://img.shields.io/badge/CSS-639?logo=css&logoColor=fff)](#)
@@ -19,7 +20,7 @@ Feel free to contact me or add issue if you see any bug or if you had suggestion
 [![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?logo=javascript&logoColor=000)](#)
 [![pnpm](https://img.shields.io/badge/pnpm-F69220?logo=pnpm&logoColor=fff)](#)
 
-## Scripts
+## Scripts 📄
 
 ```bash
  pn tw
@@ -31,7 +32,7 @@ Feel free to contact me or add issue if you see any bug or if you had suggestion
 | :---------- | :----------- | :-------------------- |
 | `input.css` | `output.css` | `/assets/styles`      |
 
-## Notes
+## Notes 📝
 
 > We have a `gitCommands.js` file in `constants` folder which has git commands datas.
 
@@ -41,7 +42,7 @@ Feel free to contact me or add issue if you see any bug or if you had suggestion
 
 > `Toastify` package used for notifications.
 
-## Preview
+## Preview 🖼️
 
 <div align="center">
 
