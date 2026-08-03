@@ -55,4 +55,6 @@ Feel free to contact me or add issue if you see any bug or if you had suggestion
 
 ![preview image](https://github.com/Ali-boorboor/Git-CheatSheet/blob/main/assets/images/readme-images/performance.png)
 
+![footer gif](https://github.com/Ali-boorboor/Git-CheatSheet/blob/main/assets/images/readme-images/footer-svg.svg)
+
 </div>
