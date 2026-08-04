@@ -3,8 +3,9 @@
 A simple cheat sheet web page for git **most used commands**.
 
 ![total commits](https://img.shields.io/github/commit-activity/t/Ali-boorboor/Git-CheatSheet)
-![createdAt](https://img.shields.io/github/created-at/ali-boorboor/git-cheatsheet)
+![createdAt](https://img.shields.io/github/created-at/ali-boorboor/git-cheatsheet?color=red)
 ![version tag](https://img.shields.io/github/v/tag/ali-boorboor/git-cheatsheet)
+![root files and folders count](https://img.shields.io/github/directory-file-count/ali-boorboor/git-cheatsheet?color=red)
 
 ## Demo 👀
 
